@@ -22,7 +22,7 @@ header {
 }
 
 main {
-  width: 50%;
+  width: 60%;
   margin: 1em;
   padding: 2em;
   border: solid 1px #ccc;
@@ -32,9 +32,19 @@ main > * {
   padding: 10px;
 }
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 input {
   padding: 5px;
   font-size: 18px;
+}
+
+input[type="text"] {
+  flex: 1;
+  margin-right: 5px;
 }
 
 ul {
@@ -63,4 +73,12 @@ button.remove-item {
 
 button.remove-item:hover {
   background-color: #57a157;
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    width: 100%;
+    margin: 5px;
+    padding: 1em;
+  }
 }
