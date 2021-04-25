@@ -77,7 +77,7 @@ button.remove-item:hover {
 
 @media screen and (max-width: 750px) {
   main {
-    width: 100%;
+    width: 90%;
     margin: 5px;
     padding: 1em;
   }
