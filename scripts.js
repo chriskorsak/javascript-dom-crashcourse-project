@@ -1,11 +1,14 @@
-//form input for adding new list item
+//Global variables//
+//input text box
 const input = document.querySelector('input[type="text"]');
+//submit button
+const submitButton = document.querySelector('input[type="submit"]');
+// list of items
+const list = document.querySelector('ul');
 
 
 //disable submit button by default until input has text
-const submitButton = document.querySelector('input[type="submit"]');
 submitButton.disabled = true;
-
 input.addEventListener('keyup', function() {
   if (input.value.length > 0) {
     submitButton.disabled = false;
@@ -14,7 +17,7 @@ input.addEventListener('keyup', function() {
   }
 })
 
-//add event when submitting form
+//submit form
 document.querySelector('form').addEventListener('submit', newListItem);
 
 // add a new list item when submitting form
@@ -42,10 +45,8 @@ function newListItem(e) {
 }
 
 //delete list item
-const list = document.querySelector('ul');
-//add click event to entire list
 list.addEventListener('click', function(e) {
-  // if the event target classname is 'remove item'...
+  // if target element has 'remove item' class name...
   if (e.target.classList.contains('remove-item')) {
     //select parent element of delete button
     const listItem = e.target.parentElement;
