@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid black; */
 }
 
 body {
@@ -12,7 +13,15 @@ body {
 header {
   background-color: #69c169;
   color: #fff;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#headerMain {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 1em;
   padding: 2em;
 }
 
@@ -29,7 +38,7 @@ main {
 }
 
 main > * {
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 form {
